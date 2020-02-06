@@ -20,7 +20,6 @@ table{
 	border-collapse: collapse;
 	margin: 0 auto;
 }
-
 table td, table th {
 	padding: 7px 0;
 	background: #fff;
@@ -42,6 +41,13 @@ th.h-ramen {
 	font-size: 0.8em;
 	text-align: center;
 }
+table tr.item:hover td,
+table tr.item:hover th {
+	background-color: rgba(166, 187, 187, 0.349); 
+}
+/* table td:hover {
+  background-color: rgba(125, 134, 134, 0.342);    
+}  */
 /**
 	---------------------------------------------------------------
 */
