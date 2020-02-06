@@ -21,6 +21,7 @@ table{
 	margin: 0 auto;
 }
 table td, table th {
+	min-width: 80px;
 	padding: 7px 0;
 	background: #fff;
 	border: solid 1px #d0dbe6;
@@ -32,6 +33,7 @@ table td, table th {
 
 th.h-ramen {
 	width: 30%;
+	min-width: 200px;
 	border: solid 1px #d0dbe6;
 	padding: 7px 0;
 	vertical-align: middle;
