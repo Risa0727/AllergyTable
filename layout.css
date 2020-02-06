@@ -26,10 +26,13 @@ table td, table th {
 	color: #333;
 	text-align: center;
 }
+td {
+	z-index: 0;
+}
 th.h-ramen {
 	width: 30%;
 	min-width: 200px;
-	border: solid 1px #d0dbe6;
+	border: solid 1px #f3fcff;
 	padding: 7px 0;
 	vertical-align: middle;
 	color: #333;
@@ -37,6 +40,10 @@ th.h-ramen {
 	background: #f3fcff;
 	font-size: 0.8em;
 	text-align: center;
+	/* 横スクロール時にラーメン名を固定表示 */
+	position: sticky;
+	left: 0;
+	z-index: 2;
 }
 /* 縦スクロール時にヘッダー固定 */
 thead th {
