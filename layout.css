@@ -11,10 +11,6 @@ caption {
 	font-weight: 400;
 	padding: 15px 0;
 }
-/* 横スクロール */
-.table-scroll{
-	overflow-x : auto;
-}
 table{
 	width: 90%;
 	border-collapse: collapse;
@@ -30,7 +26,6 @@ table td, table th {
 	color: #333;
 	text-align: center;
 }
-
 th.h-ramen {
 	width: 30%;
 	min-width: 200px;
@@ -42,6 +37,12 @@ th.h-ramen {
 	background: #f3fcff;
 	font-size: 0.8em;
 	text-align: center;
+}
+/* 縦スクロール時にヘッダー固定 */
+thead th {
+	position: sticky;
+	top: 0;
+	z-index: 1; /* tbodyより手前に表示 */
 }
 table tr.item:hover td,
 table tr.item:hover th {
