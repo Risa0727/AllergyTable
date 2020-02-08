@@ -9,3 +9,24 @@ body {
 h1 {
 	padding: 10px 0;
 }
+/* ホバーの列にハイライト追加 */
+.cross-highlight {
+  overflow: hidden;
+}
+.cross-highlight th,
+.cross-highlight td {
+	position: relative;
+}
+.cross-highlight td:hover {
+  background-color: #ccc;
+}
+.cross-highlight td:hover:after {
+	content: "";
+	background-color: #f0f0f0;
+	width: 100%;
+	height: 200vh;
+	position: absolute;
+	top: -100vh;
+	left: 0;
+	z-index: -1;
+}
