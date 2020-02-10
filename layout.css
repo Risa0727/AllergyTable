@@ -33,7 +33,7 @@ h1 {
 /* ドロップダウンリスト */
 #dropdown {
 	overflow: hidden;
-	width: 50%;
+	width: 20em;
 	margin: 2em 0.5em;
 	/* text-align: center; */
 	position: relative;
@@ -54,18 +54,9 @@ h1 {
 	border-top: 6px solid #666;
 	pointer-events: none;
 }
-#dropdown::after {
-	position: absolute;
-	top: 0;
-	right: 2.5em;
-	bottom: 0;
-	width: 1px;
-	content: '';
-	border-left: 1px solid #bbbbbb;
-}
 
 #dropdown select {
-	width: 93%;
+	width: 100%;
 	padding: 8px 38px 8px 8px;
 	color: #666;
 	cursor: pointer;
