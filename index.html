@@ -31,18 +31,14 @@
 </nav>
 <main>  
   <h1 class="my-3 ml-3">Allergy Table</h1>
-  <ul>
-    <li class="mod_LabelAll" stlye="width:200px">
-      <a href="#tbl_top">Display All</a>
-    </li>
-  </ul>
-  <ul class="mod_koumokulist">
-    <li><a class="ramen01" href="#ramen01">Ramen01</a></li>
-    <li><a class="ramen02" href="#ramen02">Ramen02</a></li>
-    <li><a class="ramen03" href="#ramen03">Ramen03</a></li>
-    <li><a class="ramen04" href="#ramen04">Ramen04</a></li>
-    <li><a class="ramen05" href="#ramen05">Ramen05</a></li>
-  </ul>
+
+  <div is="selection-area">
+    <select name="menu-category">
+      <option value="all" checked>All</option>
+      <option value="chicken">Chicken</option>
+      <option value="pork">Pork</option>
+      <option value="others">Others</option>
+    </select>
   </div>
   <div class="table-responsive">
     <table id="tbl_top" class="table table-hover table-bordered cross-highlight">
@@ -60,7 +56,7 @@
         </tr>
       </thead>
       <tbody class="text-center">
-        <tr id="ramen01">
+        <tr class="chicken">
           <td>1</td>
           <td>Ramen1</td>
           <td>o</td>
@@ -70,7 +66,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen02">
+        <tr class="chicken">
           <td>2</td>
           <td>Ramen2</td>
           <td></td>
@@ -80,7 +76,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen03">
+        <tr class="pork">
           <td>3</td>
           <td>Ramen3</td>
           <td>o</td>
@@ -90,7 +86,7 @@
           <td>o</td>
           <td>o</td>
         </tr>
-        <tr id="ramen04">
+        <tr class="pork">
           <td>4</td>
           <td>Ramen4</td>
           <td>o</td>
@@ -100,7 +96,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen05">
+        <tr class="pork">
           <td>5</td>
           <td>Ramen5</td>
           <td>o</td>
@@ -110,7 +106,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen06">
+        <tr class="vege">
           <td>6</td>
           <td>Ramen6</td>
           <td>o</td>
@@ -120,7 +116,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen07">
+        <tr class="ramen04">
           <td>7</td>
           <td>Ramen7</td>
           <td>o</td>
@@ -130,7 +126,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen08">
+        <tr class="ramen05">
           <td>8</td>
           <td>Ramen8</td>
           <td>o</td>
@@ -140,7 +136,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen09">
+        <tr class="ramen09">
           <td>9</td>
           <td>Ramen9</td>
           <td>o</td>
@@ -150,7 +146,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen10">
+        <tr class="ramen10">
           <td>10</td>
           <td>Ramen10</td>
           <td>o</td>
@@ -160,7 +156,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen11">
+        <tr class="others">
           <td>11</td>
           <td>Ramen11</td>
           <td>o</td>
@@ -170,7 +166,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen12">
+        <tr class="others">
           <td>12</td>
           <td>Ramen12</td>
           <td>o</td>
@@ -180,7 +176,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen13">
+        <tr class="others">
           <td>13</td>
           <td>Ramen13</td>
           <td>o</td>
@@ -190,7 +186,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen14">
+        <tr class="others">
           <td>14</td>
           <td>Ramen14</td>
           <td>o</td>
@@ -200,7 +196,7 @@
           <td></td>
           <td>o</td>
         </tr>
-        <tr id="ramen15">
+        <tr class="others">
           <td>15</td>
           <td>Ramen15</td>
           <td>o</td>
