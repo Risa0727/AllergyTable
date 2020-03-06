@@ -5,10 +5,10 @@
  *  予測補完機能追加したい
  */
 $(function() {
-  searchWord = function() {
+  var searchWord = function() {
     // 変数宣言
     var searchResult,
-    searchText = $(this).val(), 
+    searchText = capitalize($(this).val()), 
     targetText,
     targetClass;
 
@@ -47,6 +47,11 @@ $(function() {
     }
   };
 
+  // 先頭のみ大文字に変換
+  var capitalize = function(str) {
+    if (!str || typeof str !== 'string') return str;
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  };
   // execute
   $('#search-text').on('input', searchWord);
 });
