@@ -30,6 +30,11 @@ h1 {
 	left: 0;
 	z-index: -1;
 }
+/* 検索エリア */
+#search-area {
+	display: flex;
+	align-items: center;
+}
 /* ドロップダウンリスト */
 #dropdown {
 	overflow: hidden;
@@ -71,5 +76,20 @@ h1 {
 }
 
 #dropdown select::-ms-expand {
+	display: none;
+}
+
+#search-word-area {
+	width: 30em;
+}
+#search-word-area input {
+	width: 40%;
+	padding: 6px 38px 6px 6px;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	/* border: none; */
+	outline: none;
+}
+tbody .hidden {
 	display: none;
 }

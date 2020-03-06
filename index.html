@@ -15,6 +15,7 @@
   <script src="./bootstrap/js/bootstrap.min.js"></script>
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <script src="searchWord.js"></script>
   <script src="function.js"></script>
   <link rel="stylesheet" href="layout.css">
   
@@ -31,15 +32,22 @@
 </nav>
 <main>  
   <h1 class="my-3 ml-3">Allergy Table</h1>
-
-  <div id="selection-area">
-    <div id="dropdown">
-      <select name="menu-category">
-        <option value="all">All</option>
-        <option value="chicken">Chicken</option>
-        <option value="pork">Pork</option>
-        <option value="others">Others</option>
-      </select>
+  <div id="search-area">
+    <div id="selection-area">
+      <div id="dropdown">
+        <select name="menu-category">
+          <option value="all">All</option>
+          <option value="chicken">Chicken</option>
+          <option value="pork">Pork</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+    </div>
+    <div id="search-word-area">
+      <form>
+        <input type="text" id="search-text" placeholder="Enter a keyword">
+        <span>is NOT included</span>
+      </form>
     </div>
   </div>
   <div class="table-responsive">
@@ -47,166 +55,166 @@
       <!-- <caption>Allergy Table</caption> -->
       <thead class="text-center">
         <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Sub1</th>
-          <th>Sub2</th>
-          <th>Sub3</th>
-          <th>Sub4</th>
-          <th>Sub5</th>
-          <th>Sub6</th>
+          <th class="col1">#</th>
+          <th class="col2">Name</th>
+          <th class="col3">Sub1</th>
+          <th class="col4">Sub2</th>
+          <th class="col5">Sub3</th>
+          <th class="col6">Sub4</th>
+          <th class="col7">Sub5</th>
+          <th class="col8">Sub6</th>
         </tr>
       </thead>
       <tbody class="text-center">
         <tr class="chicken">
-          <td>1</td>
-          <td>Ramen1</td>
-          <td>o</td>
-          <td>o</td>
-          <td>o</td>
-          <td>o</td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">1</td>
+          <td class="col2">Ramen1</td>
+          <td class="col3">o</td>
+          <td class="col4">o</td>
+          <td class="col5">o</td>
+          <td class="col6">o</td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="chicken">
-          <td>2</td>
-          <td>Ramen2</td>
-          <td></td>
-          <td>o</td>
-          <td>o</td>
-          <td>o</td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">2</td>
+          <td class="col2">Ramen2</td>
+          <td class="col3"></td>
+          <td class="col4">o</td>
+          <td class="col5">o</td>
+          <td class="col6">o</td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="pork">
-          <td>3</td>
-          <td>Ramen3</td>
-          <td>o</td>
-          <td>o</td>
-          <td>o</td>
-          <td>o</td>
-          <td>o</td>
-          <td>o</td>
+          <td class="col1">3</td>
+          <td class="col2">Ramen3</td>
+          <td class="col3">o</td>
+          <td class="col4">o</td>
+          <td class="col5">o</td>
+          <td class="col6">o</td>
+          <td class="col7">o</td>
+          <td class="col8">o</td>
         </tr>
         <tr class="pork">
-          <td>4</td>
-          <td>Ramen4</td>
-          <td>o</td>
-          <td>o</td>
-          <td></td>
-          <td>o</td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">4</td>
+          <td class="col2">Ramen4</td>
+          <td class="col3">o</td>
+          <td class="col4">o</td>
+          <td class="col5"></td>
+          <td class="col6">o</td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="pork">
-          <td>5</td>
-          <td>Ramen5</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">5</td>
+          <td class="col2">Ramen5</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="vege">
-          <td>6</td>
-          <td>Ramen6</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">6</td>
+          <td class="col2">Ramen6</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="ramen04">
-          <td>7</td>
-          <td>Ramen7</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">7</td>
+          <td class="col2">Ramen7</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="ramen05">
-          <td>8</td>
-          <td>Ramen8</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">8</td>
+          <td class="col2">Ramen8</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="ramen09">
-          <td>9</td>
-          <td>Ramen9</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">9</td>
+          <td class="col2">Ramen9</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="ramen10">
-          <td>10</td>
-          <td>Ramen10</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">10</td>
+          <td class="col2">Ramen10</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="others">
-          <td>11</td>
-          <td>Ramen11</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">11</td>
+          <td class="col2">Ramen11</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="others">
-          <td>12</td>
-          <td>Ramen12</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">12</td>
+          <td class="col2">Ramen12</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="others">
-          <td>13</td>
-          <td>Ramen13</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">13</td>
+          <td class="col2">Ramen13</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="others">
-          <td>14</td>
-          <td>Ramen14</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">14</td>
+          <td class="col2">Ramen14</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
         <tr class="others">
-          <td>15</td>
-          <td>Ramen15</td>
-          <td>o</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>o</td>
+          <td class="col1">15</td>
+          <td class="col2">Ramen15</td>
+          <td class="col3">o</td>
+          <td class="col4"></td>
+          <td class="col5"></td>
+          <td class="col6"></td>
+          <td class="col7"></td>
+          <td class="col8">o</td>
         </tr>
       </tbody>
     </table>
