@@ -15,7 +15,7 @@
   <script src="./bootstrap/js/bootstrap.min.js"></script>
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
-  <script src="searchWord.js"></script>
+  <!-- <script src="searchWord.js"></script> -->
   <script src="function.js"></script>
   <link rel="stylesheet" href="layout.css">
   
@@ -34,7 +34,7 @@
   <h1 class="my-3 ml-3">Allergy Table</h1>
   <div id="search-area">
     <div id="selection-area">
-      <div id="dropdown">
+      <div class="dropdown">
         <select name="menu-category">
           <option value="all">All</option>
           <option value="chicken">Chicken</option>
@@ -43,12 +43,21 @@
         </select>
       </div>
     </div>
-    <div id="search-word-area">
+    <div id="select-allergy-area">
+      <div class="dropdown">
+        <select name="allergy-category">
+          <option value="noAllergy">No Allergy</option>
+          <option value="Egg">Egg</option>
+          <option value="Peanuts">Peanuts</option>
+        </select>
+      </div>
+    </div>
+    <!-- <div id="search-word-area">
       <form>
         <input type="text" id="search-text" placeholder="Enter a keyword">
         <span>is NOT included</span>
       </form>
-    </div>
+    </div> -->
   </div>
   <div class="table-responsive">
     <table id="tbl_top" class="table table-hover table-bordered cross-highlight">
