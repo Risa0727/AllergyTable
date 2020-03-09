@@ -32,33 +32,35 @@
 </nav>
 <main>  
   <h1 class="my-3 ml-3">Allergy Table</h1>
-  <div id="search-area">
-    <div id="selection-area">
-      <div class="dropdown">
-        <select name="menu-category">
-          <option value="all">All</option>
-          <option value="chicken">Chicken</option>
-          <option value="pork">Pork</option>
-          <option value="others">Others</option>
-        </select>
+  <div id="search-area" class="container-fluid">
+    <div class="row">
+      <div id="selection-area" class="col-md-6">
+        <div class="dropdown">
+          <select name="menu-category">
+            <option value="all">All Ramen</option>
+            <option value="chicken">Chicken Ramen</option>
+            <option value="pork">Pork Ramen</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div id="select-allergy-area">
-      <div class="dropdown">
-        <select name="allergy-category">
-          <option value="noAllergy">No Allergy</option>
-          <option value="Egg">Egg</option>
-          <option value="Peanuts">Peanuts</option>
-        </select>
+      <div id="select-allergy-area"  class="col-md-6">
+        <div class="dropdown">
+          <select name="allergy-category">
+            <option value="noAllergy">No Allergy</option>
+            <option value="Egg">Egg</option>
+            <option value="Peanuts">Peanuts</option>
+          </select>
+        </div>
       </div>
-    </div>
+    </div><!-- row -->
     <!-- <div id="search-word-area">
       <form>
         <input type="text" id="search-text" placeholder="Enter a keyword">
         <span>is NOT included</span>
       </form>
     </div> -->
-  </div>
+  </div><!-- search-area -->
   <div class="table-responsive">
     <table id="tbl_top" class="table table-hover table-bordered cross-highlight">
       <!-- <caption>Allergy Table</caption> -->
